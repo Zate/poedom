@@ -37,10 +37,11 @@
 
             li a {
                 display: block;
-                color: rgb(235, 232, 232);
+                color: goldenrod;
                 text-align: center;
                 padding: 14px 16px;
-                text-decoration: none;
+                text-decoration:goldenrod;
+                text-shadow: 1px 1px 2px black, 0 0 25px rgb(66, 66, 66), 0 0 5px black;
             }
 
             /* Change the link color to #111 (black) on hover */
@@ -57,16 +58,17 @@
                 margin-left: 170px;
                 margin-top: 50px;
                 width: 50%;
-                background-color: black;
+                background:rgba(0,0,0,0.5);
                 border: 2px solid black;
-                opacity: 0.4;
-                filter: alpha(opacity=40); /* For IE8 and earlie */
+                
             }
             
             div.transbox {
                 margin: 30px;
-                background-color: black;
+                /* background:rgba(0,0,0,0.5); */
                 border: 1px solid white;
+                /* opacity: 0.5;
+                filter: alpha(opacity=50);  */
                
             }
             
@@ -76,9 +78,11 @@
                 color: #000000;
             }
 
-            img {
-
+            table {
+                vertical-align: top
             }
+
+            
 
             
            
@@ -87,29 +91,39 @@
         
     <body>
             <ul>
-                    <li><a href="/rnd">Random</a></li>
-                    <li><a href="/rnd?scion=no">No Scion</a></li>
-                    <li><a href="/rnd?scion=no&league=true">League</a></li>
+                    <li><a href="/">Random</a></li>
+                    <li><a href="/?scion=no">No Scion</a></li>
+                    <li><a href="/?scion=no&league=true">League</a></li>
+                    <li><a href="/api">API</a></li>
                     <li style="float:right"><a class="active" href="https://github.com/Zate/poedom">Code</a></li>
                   </ul>
 
-                  <div class="background">
-                        <div class="transbox">
-                        <p><table>
-                                <tr>
-                                    <td><img src="/static/{{index . "ascendency"}}.jpg" title='{{index . "class"}} {{index . "ascendency"}}'></td>
-                                    <td><h1>{{index . "name"}} the {{index . "class"}} {{index . "ascendency"}}</h1></td>
-                                </tr>
-                                <tr>
-                                    <td><img width="78px" height="78px" src="/static/{{index . "gemImg"}}_inventory_icon.png"></td>
-                                    <td><h1>Using {{index . "gem"}}</h1></td>
-                                </tr>
+
+                  <div>
+                        
+                            <div class="background">
+                                    <div class="transbox">
+                                            <p><table class="ontop">
+                                                    <tr>
+                                                        <td><img src="/static/{{index . "ascendency"}}.jpg" title='{{index . "class"}} {{index . "ascendency"}}'></td>
+                                                        <td><h1>{{index . "name"}} the {{index . "class"}} {{index . "ascendency"}}</h1></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img width="78px" height="78px" src="/static/{{index . "gemImg"}}_inventory_icon.png"></td>
+                                                        <td><h1>Using {{index . "gem"}}</h1></td>
+                                                    </tr>
             <tr>
                 <td></td>
-                <td><h1>In {{index . "ssf"}} {{index . "hc"}} {{index . "league"}}</h1></td>
+                <td><h1>In {{index . "league"}}</h1></td>
             </tr>
         </table>
+    </div>
+</div>
+  
 
+  
+    
+</div>
        
     </body>
 </html>

@@ -148,32 +148,6 @@ func main() {
 	}
 	e.Renderer = renderer
 
-	e.GET("/rnd", func(c echo.Context) error {
-		num1 := 7
-		scion := c.FormValue("scion")
-		if scion == "no" {
-			num1 = 6
-		}
-		temp := "rnd.html"
-		league := c.FormValue("league")
-		if league == "true" {
-			temp = "rndl.html"
-		}
-		choice, ascen, rndgem := GetNums(num1, numGems)
-		gemImg := strings.Replace(gems[rndgem], " ", "_", -1)
-
-		return c.Render(http.StatusOK, temp, map[string]interface{}{
-			"class":      Classes[choice].Class,
-			"ascendency": Classes[choice].Ascension[ascen],
-			"name":       randomdata.SillyName(),
-			"gemImg":     gemImg,
-			"gem":        gems[rndgem],
-			"league":     randomdata.StringSample("Abyss", "Standard"),
-			"ssf":        randomdata.StringSample("SSF", "Normal"),
-			"hc":         randomdata.StringSample("HardCore", "SoftCore"),
-		})
-	}).Name = "rnd"
-
 	e.GET("/api", func(c echo.Context) error {
 		num1 := 7
 		scion := c.FormValue("scion")
@@ -189,9 +163,9 @@ func main() {
 			"name":       randomdata.SillyName(),
 			"gemImg":     gemImg,
 			"gem":        gems[rndgem],
-			"league":     randomdata.StringSample("Abyss", "Standard"),
-			"ssf":        randomdata.StringSample("SSF", "Normal"),
-			"hc":         randomdata.StringSample("HardCore", "SoftCore"),
+			"league":     randomdata.StringSample("SSF Hardcore Abyss", "Normal Hardcore Abyss", "SSF Softcore Abyss", "Normal Softcore Abyss", "SSF Hardcore Standard", "Normal Hardcore Standard", "SSF Softcore Standard", "Normal Softcore Standard"),
+			// "ssf":        randomdata.StringSample("SSF", "Normal"),
+			// "hc":         randomdata.StringSample("HardCore", "SoftCore"),
 		}
 		return c.JSON(http.StatusOK, r)
 	})
@@ -216,9 +190,9 @@ func main() {
 			"name":       randomdata.SillyName(),
 			"gemImg":     gemImg,
 			"gem":        gems[rndgem],
-			"league":     randomdata.StringSample("Abyss", "Standard"),
-			"ssf":        randomdata.StringSample("SSF", "Normal"),
-			"hc":         randomdata.StringSample("HardCore", "SoftCore"),
+			"league":     randomdata.StringSample("SSF Hardcore Abyss", "Normal Hardcore Abyss", "SSF Softcore Abyss", "Normal Softcore Abyss", "SSF Hardcore Standard", "Normal Hardcore Standard", "SSF Softcore Standard", "Normal Softcore Standard"),
+			// "ssf":        randomdata.StringSample("SSF", "Normal"),
+			// "hc":         randomdata.StringSample("HardCore", "SoftCore"),
 		})
 	}).Name = "index"
 
