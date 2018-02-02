@@ -1,15 +1,72 @@
 <html>
-    <body>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+        <title>Path of Exile Random Build Challenge</title>
         
-        <table>
-            <tr>
-                <td><img src="/static/{{index . "ascendency"}}.jpg"></td>
-                <td><h1>{{index . "name"}} the {{index . "class"}} {{index . "ascendency"}}</h1></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><h1>Using {{index . "gem"}}</h1></td>
-            </tr>
+        <style>
+            * { margin: 0; padding: 0; }
+            
+            html { 
+                background: url(static/bg.jpg) no-repeat center center fixed; 
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            li {
+                float: left;
+            }
+
+            li a {
+                display: block;
+                color: rgb(235, 232, 232);
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            /* Change the link color to #111 (black) on hover */
+            li a:hover {
+                background-color: #111;
+            }
+
+            .active {
+                background-color: rgb(141, 143, 141);
+            }
+
+           
+        </style>
+        
+    <body>
+            <ul>
+                    <li><a href="/rnd">Random</a></li>
+                    <li><a href="/rnd?scion=no">No Scion</a></li>
+                    <li><a href="/rnd?scion=no&league=true">League</a></li>
+                    <li style="float:right"><a class="active" href="https://github.com/Zate/poedom">Code</a></li>
+                  </ul>
+
+            <div>
+                    
+                    <div>
+                        <p><table>
+                                <tr>
+                                    <td><img src="/static/{{index . "ascendency"}}.jpg" title='{{index . "class"}} {{index . "ascendency"}}'></td>
+                                    <td><h1>{{index . "name"}} the {{index . "class"}} {{index . "ascendency"}}</h1></td>
+                                </tr>
+                                <tr>
+                                    <td><img width="78px" height="78px" src="/static/{{index . "gemImg"}}_inventory_icon.png"></td>
+                                    <td><h1>Using {{index . "gem"}}</h1></td>
+                                </tr>
             <tr>
                 <td></td>
                 <td><h1>In {{index . "ssf"}} {{index . "hc"}} {{index . "league"}}</h1></td>
