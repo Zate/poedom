@@ -121,7 +121,7 @@ func main() {
 		dn, _ := jsonparser.GetString(value, "base_item", "display_name")
 		sup, _ := jsonparser.GetBoolean(value, "is_support")
 		mc, _ := jsonparser.GetBoolean(value, "active_skill", "is_manually_casted")
-		tag, _, _, _ := jsonparser.Get(value, "tags")
+		tag, _, _, _ := jsonparser.Get(value, "active_skill", "types")
 		_ = json.Unmarshal(tag, &tags)
 		for _, t := range tags {
 			//log.Println(t)
@@ -197,10 +197,31 @@ func main() {
 	})
 
 	e.GET("/", func(c echo.Context) error {
+		num1 := 7
+		scion := c.FormValue("scion")
+		if scion == "no" {
+			num1 = 6
+		}
+		temp := "rnd.html"
+		league := c.FormValue("league")
+		if league == "true" {
+			temp = "rndl.html"
+		}
+		choice, ascen, rndgem := GetNums(num1, numGems)
+		gemImg := strings.Replace(gems[rndgem], " ", "_", -1)
 
-		return c.Render(http.StatusOK, "index.html", map[string]interface{}{})
+		return c.Render(http.StatusOK, temp, map[string]interface{}{
+			"class":      Classes[choice].Class,
+			"ascendency": Classes[choice].Ascension[ascen],
+			"name":       randomdata.SillyName(),
+			"gemImg":     gemImg,
+			"gem":        gems[rndgem],
+			"league":     randomdata.StringSample("Abyss", "Standard"),
+			"ssf":        randomdata.StringSample("SSF", "Normal"),
+			"hc":         randomdata.StringSample("HardCore", "SoftCore"),
+		})
 	}).Name = "index"
 
-	e.Logger.Fatal(e.Start(":25000"))
+	e.Logger.Fatal(e.Start(":2086"))
 
 }

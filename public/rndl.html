@@ -3,9 +3,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 	
         <title>Path of Exile Random Build Challenge</title>
-        
+        <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
         <style>
-            * { margin: 0; padding: 0; }
+            
+            body {
+                font-family: 'Cinzel', serif;
+                color: goldenrod;
+            }
+
+            h1 {
+                text-shadow: 1px 1px 2px black, 0 0 25px rgb(66, 66, 66), 0 0 5px black;
+            }
             
             html { 
                 background: url(static/bg.jpg) no-repeat center center fixed; 
@@ -44,8 +52,38 @@
                 background-color: rgb(141, 143, 141);
             }
 
+            div.background {
+                /* background: url(klematis.jpg) repeat; */
+                margin-left: 170px;
+                margin-top: 50px;
+                width: 50%;
+                background-color: black;
+                border: 2px solid black;
+                opacity: 0.4;
+                filter: alpha(opacity=40); /* For IE8 and earlie */
+            }
+            
+            div.transbox {
+                margin: 30px;
+                background-color: black;
+                border: 1px solid white;
+               
+            }
+            
+            div.transbox p {
+                margin: 5%;
+                font-weight: bold;
+                color: #000000;
+            }
+
+            img {
+
+            }
+
+            
            
         </style>
+        
         
     <body>
             <ul>
@@ -55,9 +93,8 @@
                     <li style="float:right"><a class="active" href="https://github.com/Zate/poedom">Code</a></li>
                   </ul>
 
-            <div>
-                    
-                    <div>
+                  <div class="background">
+                        <div class="transbox">
                         <p><table>
                                 <tr>
                                     <td><img src="/static/{{index . "ascendency"}}.jpg" title='{{index . "class"}} {{index . "ascendency"}}'></td>
