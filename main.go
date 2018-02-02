@@ -130,7 +130,7 @@ func main() {
 				skip = true
 			}
 		}
-		if rs == "released" && sup == false && mc == true && skip == false {
+		if rs == "released" && sup == false && mc == true && skip == false && dn != "Portal" {
 			//log.Printf("%v %v", dn, tags[0])
 			gems = append(gems, dn)
 		}
