@@ -92,6 +92,7 @@ func main() {
 	log.SetFlags(log.LstdFlags | log.Lmicroseconds | log.Lshortfile)
 	e := echo.New()
 	e.Static("/static", "static")
+	e.File("/favicon.ico", "favicon.ico")
 	e.Use(middleware.Logger())
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
 		AllowOrigins: []string{"*"},
