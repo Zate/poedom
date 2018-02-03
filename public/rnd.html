@@ -1,56 +1,35 @@
 <html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-	
         <title>Path of Exile Random Build Challenge</title>
         <link REL="StyleSheet" TYPE="text/css" HREF="common.css">
-        <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
-        <style>
-            
-            
-            
-
-            
-           
-        </style>
-        
-        
+        <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">   
     <body>
-            <ul>
-                    <li><a href="/">Random</a></li>
-                    <li><a href="/?scion=no">No Scion</a></li>
-                    <li><a href="/?scion=no&league=true">League</a></li>
-                    <li><a href="/api">API</a></li>
-                    <li style="float:right"><a class="active" href="https://github.com/Zate/poedom">Code</a></li>
-                  </ul>
-
-
-                  <div>
-                        <div class="title"><div><h1>Path of Exile Random Build Generator</h1></div></div>
-                            <div class="background">
-                                <div class="name"><div><h1>{{index . "name"}}</h1></div></div>
-                                    <div class="transbox">
-                                            <p><table class="ontop">
-                                                    <tr>
-                                                        <td><img src="/static/{{index . "ascendency"}}.jpg" title='{{index . "class"}} {{index . "ascendency"}}'></td>
-                                                        <td><h1>{{index . "class"}} {{index . "ascendency"}}</h1></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><img width="78px" height="78px" src="/static/{{index . "gemImg"}}_inventory_icon.png"></td>
-                                                        <td><h1>Using {{index . "gem"}}</h1></td>
-                                                    </tr>
-                                                </table></p>
-                                </div>
+        <ul>
+            <li><a href="/">Random</a></li>
+            <li><a href="/?scion=no">No Scion</a></li>
+            <li><a href="/?scion=no&league=true">League</a></li>
+            <li><a href="/api">API</a></li>
+            <li style="float:right"><a class="active" href="https://github.com/Zate/poedom">Code</a></li>
+        </ul>
+        <div>
+            <div class="title"><div><h1>Path of Exile Random Build Generator</h1></div></div>
+            <div class="background">
+                <div class="name"><div><h1>{{index . "name"}}</h1></div></div>
+                <div class="transbox">
+                    <p><table class="ontop">
+                            <tr>
+                                <td><img src="/static/{{index . "ascendency"}}.jpg" title='{{index . "class"}} {{index . "ascendency"}}'></td>
+                                <td><h1>{{index . "class"}} {{index . "ascendency"}}</h1></td>
+                            </tr>
+                            <tr>
+                                <td><img width="78px" height="78px" src="/static/{{index . "gemImg"}}_inventory_icon.png"></td>
+                                <td><h1>Using {{index . "gem"}}</h1></td>
+                            </tr>
+                        </table>
+                    </p>
                 </div>
-                  
-
-                  
-                    
-                </div>
-                
-        
-        
-
-       
+            </div>
+        </div>
     </body>
 </html>
