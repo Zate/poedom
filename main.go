@@ -14,10 +14,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Pallinder/go-randomdata"
 	"github.com/buger/jsonparser"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
+	"github.com/zate/go-randomdata"
 )
 
 // CheckErr to handle errors
@@ -93,6 +93,7 @@ func main() {
 	e := echo.New()
 	e.Static("/static", "static")
 	e.File("/favicon.ico", "favicon.ico")
+	e.File("/common.css", "common.css")
 	e.Use(middleware.Logger())
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
 		AllowOrigins: []string{"*"},

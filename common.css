@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+}
+
+.unbehaved-element {
+    font-size: 2em;
+}
+
+.title {
+    margin: 3% auto;
+    display: table;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  
+  /* Mobile Styles */
+  @media only screen and (max-width: 400px) {
+    html {
+        font-size: 11px;
+    }
+      
+    body {
+        font-family: 'Cinzel', serif;
+        color: goldenrod;
+    }
+
+    h1 {
+        text-shadow: 1px 1px 2px black, 0 0 25px rgb(66, 66, 66), 0 0 5px black;
+        font-size: 0.8em;
+    }
+
+    html { 
+        background: url(static/bg.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: goldenrod;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration:goldenrod;
+        text-shadow: 1px 1px 2px black, 0 0 25px rgb(66, 66, 66), 0 0 5px black;
+    }
+
+    /* Change the link color to #111 (black) on hover */
+    li a:hover {
+        background-color: #111;
+    }
+
+    .active {
+        background-color: rgb(141, 143, 141);
+    }
+
+    div.background {
+        /* background: url(klematis.jpg) repeat; */
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10%;
+        width: 75%;
+        background:rgba(0,0,0,0.5);
+        border: 2px solid black;
+        
+    }
+
+    .name {
+        margin: 0 auto;
+        display: table;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+    }
+
+    .name h1 {
+        text-shadow: 1px 1px 2px black, 0 0 25px rgb(66, 66, 66), 0 0 5px black;
+        font-size: 1.0em;
+    }
+
+    .title {
+        margin: 3% auto;
+        display: table;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+    }
+
+    div.transbox {
+        margin: 1em;
+        border: 1px solid white;
+    }
+
+    div.transbox p {
+        margin: 5%;
+        font-weight: bold;
+        color: #000000;
+    }
+
+    table {
+        vertical-align: top
+    }
+  }
+  
+  /* Tablet Styles */
+  @media only screen and (min-width: 401px) and (max-width: 767px) {
+    html {
+        font-size: 14px;
+    }
+    
+    body {
+        font-family: 'Cinzel', serif;
+        color: goldenrod;
+    }
+
+    h1 {
+        text-shadow: 1px 1px 2px black, 0 0 25px rgb(66, 66, 66), 0 0 5px black;
+        font-size: 1em;
+    }
+
+    html { 
+        background: url(static/bg.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: goldenrod;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration:goldenrod;
+        text-shadow: 1px 1px 2px black, 0 0 25px rgb(66, 66, 66), 0 0 5px black;
+    }
+
+    /* Change the link color to #111 (black) on hover */
+    li a:hover {
+        background-color: #111;
+    }
+
+    .active {
+        background-color: rgb(141, 143, 141);
+    }
+
+    div.background {
+        /* background: url(klematis.jpg) repeat; */
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10%;
+        width: 75%;
+        background:rgba(0,0,0,0.5);
+        border: 2px solid black;
+        
+    }
+
+    .name {
+        margin: 0 auto;
+        display: table;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+    }
+
+    .title {
+        margin: 3% auto;
+        display: table;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+    }
+
+    div.transbox {
+        margin: 1em;
+        border: 1px solid white;
+    }
+
+    div.transbox p {
+        margin: 5%;
+        font-weight: bold;
+        color: #000000;
+    }
+
+    table {
+        vertical-align: top
+    }
+  }
+
+  /* Large Tablet Styles */
+  @media only screen and (min-width: 768px) and (max-width: 960px) {
+    html {
+        font-size: 16px;
+    }
+    
+    body {
+        font-family: 'Cinzel', serif;
+        color: goldenrod;
+    }
+
+    h1 {
+        text-shadow: 1px 1px 2px black, 0 0 25px rgb(66, 66, 66), 0 0 5px black;
+        font-size: 1.2em;
+    }
+
+    html { 
+        background: url(static/bg.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: goldenrod;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration:goldenrod;
+        text-shadow: 1px 1px 2px black, 0 0 25px rgb(66, 66, 66), 0 0 5px black;
+    }
+
+    /* Change the link color to #111 (black) on hover */
+    li a:hover {
+        background-color: #111;
+    }
+
+    .active {
+        background-color: rgb(141, 143, 141);
+    }
+
+    div.background {
+        /* background: url(klematis.jpg) repeat; */
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10%;
+        width: 75%;
+        background:rgba(0,0,0,0.5);
+        border: 2px solid black;
+        
+    }
+
+    .name {
+        margin: 0 auto;
+        display: table;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+    }
+
+    .title {
+        margin: 3% auto;
+        display: table;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+    }
+
+    div.transbox {
+        margin: 1em;
+        border: 1px solid white;
+    }
+
+    div.transbox p {
+        margin: 5%;
+        font-weight: bold;
+        color: #000000;
+    }
+
+    table {
+        vertical-align: top
+    }
+  }
+  
+  /* Desktop Styles */
+  @media only screen and (min-width: 961px) {
+    body {
+        font-family: 'Cinzel', serif;
+        color: goldenrod;
+    }
+
+    h1 {
+        text-shadow: 1px 1px 2px black, 0 0 25px rgb(66, 66, 66), 0 0 5px black;
+        font-size: 2em;
+    }
+
+    html { 
+        background: url(static/bg.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: goldenrod;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration:goldenrod;
+        text-shadow: 1px 1px 2px black, 0 0 25px rgb(66, 66, 66), 0 0 5px black;
+    }
+
+    /* Change the link color to #111 (black) on hover */
+    li a:hover {
+        background-color: #111;
+    }
+
+    .active {
+        background-color: rgb(141, 143, 141);
+    }
+
+    div.background {
+        margin: 0 auto;
+        width: 75%;
+        background:rgba(0,0,0,0.5);
+        border: 2px solid black;
+    }
+
+    .name {
+        margin: 0 auto;
+        display: table;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+    }
+
+    div.transbox {
+        margin: 1em;
+        border: 1px solid white;
+    }
+
+    div.transbox p {
+        margin: 5%;
+        font-weight: bold;
+        color: #000000;
+    }
+
+    table {
+        vertical-align: top
+    }
+
+}
+

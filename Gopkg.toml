@@ -28,3 +28,7 @@
 [[constraint]]
   branch = "master"
   name = "github.com/Pallinder/go-randomdata"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/zate/go-randomdata"

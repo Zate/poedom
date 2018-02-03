@@ -1,87 +1,13 @@
 <html>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	
         <title>Path of Exile Random Build Challenge</title>
+        <link REL="StyleSheet" TYPE="text/css" HREF="common.css">
         <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
         <style>
             
-            body {
-                font-family: 'Cinzel', serif;
-                color: goldenrod;
-            }
-
-            h1 {
-                text-shadow: 1px 1px 2px black, 0 0 25px rgb(66, 66, 66), 0 0 5px black;
-            }
             
-            html { 
-                background: url(static/bg.jpg) no-repeat center center fixed; 
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-            }
-
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                background-color: #333;
-            }
-
-            li {
-                float: left;
-            }
-
-            li a {
-                display: block;
-                color: goldenrod;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration:goldenrod;
-                text-shadow: 1px 1px 2px black, 0 0 25px rgb(66, 66, 66), 0 0 5px black;
-            }
-
-            /* Change the link color to #111 (black) on hover */
-            li a:hover {
-                background-color: #111;
-            }
-
-            .active {
-                background-color: rgb(141, 143, 141);
-            }
-
-            div.background {
-                /* background: url(klematis.jpg) repeat; */
-                margin-left: 170px;
-                margin-top: 50px;
-                width: 50%;
-                background:rgba(0,0,0,0.5);
-                border: 2px solid black;
-                
-            }
-            
-            div.transbox {
-                margin: 30px;
-                /* background:rgba(0,0,0,0.5); */
-                border: 1px solid white;
-                /* opacity: 0.5;
-                filter: alpha(opacity=50);  */
-               
-            }
-            
-            div.transbox p {
-                margin: 5%;
-                font-weight: bold;
-                color: #000000;
-            }
-
-            table {
-                vertical-align: top
-            }
-
             
 
             
@@ -100,13 +26,14 @@
 
 
                   <div>
-                        
+                        <div class="title"><div><h1>Path of Exile Random Build Generator</h1></div></div>
                             <div class="background">
+                                <div class="name"><div><h1>{{index . "name"}}</h1></div></div>
                                     <div class="transbox">
                                             <p><table class="ontop">
                                                     <tr>
                                                         <td><img src="/static/{{index . "ascendency"}}.jpg" title='{{index . "class"}} {{index . "ascendency"}}'></td>
-                                                        <td><h1>{{index . "name"}} the {{index . "class"}} {{index . "ascendency"}}</h1></td>
+                                                        <td><h1>{{index . "class"}} {{index . "ascendency"}}</h1></td>
                                                     </tr>
                                                     <tr>
                                                         <td><img width="78px" height="78px" src="/static/{{index . "gemImg"}}_inventory_icon.png"></td>

@@ -3,12 +3,6 @@
 
 [[projects]]
   branch = "master"
-  name = "github.com/Pallinder/go-randomdata"
-  packages = ["."]
-  revision = "442d37d9dbc782dbd737af9ec575d8858b79261b"
-
-[[projects]]
-  branch = "master"
   name = "github.com/buger/jsonparser"
   packages = ["."]
   revision = "4be68c93a24430ddf9c33d1380b7042fd3a13424"
@@ -57,6 +51,12 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/zate/go-randomdata"
+  packages = ["."]
+  revision = "415e2494a714114045486b5cc0cb8d327bd59b94"
+
+[[projects]]
+  branch = "master"
   name = "golang.org/x/crypto"
   packages = ["acme","acme/autocert"]
   revision = "1875d0a70c90e57f11972aefd42276df65e895b9"
@@ -70,6 +70,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "be4b33fd764d23775a78e39cf64f21594b7a3ba011bb074a1b0b934b14f408f0"
+  inputs-digest = "f0c1469df2e14cf4d5d6e929e37e43ba063a0d0a7a00371101a9ef2d79191932"
   solver-name = "gps-cdcl"
   solver-version = 1
