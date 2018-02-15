@@ -1,9 +1,22 @@
-version: '2'
+version: "3"
+
+networks:
+  proxy:
+    external: true
+  internal:
+    external: false
+    
 services:
   poe:
     image: zate75/poedom
     container_name: poe
     restart: always
-    ports:
-      - "80:2086"
+    labels:
+      - traefik.backend=poe
+      - traefik.frontend.rule=Host:poerand.zate.org
+      - traefik.docker.network=proxy
+#      - traefik.port=80
+    networks:
+      - internal
+      - proxy
 #
