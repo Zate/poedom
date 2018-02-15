@@ -3,6 +3,7 @@ services:
   poe:
     image: zate75/poedom
     container_name: poe
+    restart: always
     ports:
       - "80:2086"
 #
